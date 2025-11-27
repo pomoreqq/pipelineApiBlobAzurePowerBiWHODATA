@@ -14,11 +14,11 @@ def getDetails():
     containerName = 'phase6data'
     return connectionString,containerName
 
-def getClientsWithConnectionString():
-    connectionString,containerName = getDetails()
-    blobServiceClient = BlobServiceClient.from_connection_string(connectionString)
-    containerClient = blobServiceClient.get_container_client(containerName)
-    return containerClient
+# def getClientsWithConnectionString():
+#     connectionString,containerName = getDetails()
+#     blobServiceClient = BlobServiceClient.from_connection_string(connectionString)
+#     containerClient = blobServiceClient.get_container_client(containerName)
+#     return containerClient
 
 def readDataFromFolder(folderPath:str):
     binaryContentOfFilesdict = dict()
