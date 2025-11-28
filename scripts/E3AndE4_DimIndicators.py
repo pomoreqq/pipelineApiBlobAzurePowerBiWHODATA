@@ -15,7 +15,7 @@ alcoholIndicators.iloc[3,-1] = 'grams/day'
 alcoholIndicators.iloc[4,-1] = 'DALYs per 100000 population'
 alcoholIndicators.iloc[5,-1] = 'Number of deaths'
 
-
+print(alcoholIndicators)
 lifeExpectancyIndicators['Unit'] = np.nan
 
 
@@ -50,4 +50,4 @@ tobaccoIndicators.iloc[8,-1] = 'Yes/No'
 concatedDf = pd.concat([alcoholIndicators,tobaccoIndicators,ncdIndicators,lifeExpectancyIndicators],ignore_index=True)
 
 
-concatedDf.to_parquet('C:/Users/tomas/Pulpit/pipelineApiBlobAzurePowerBiWHODATA/dataProccessed/dimIndicators.parquet',engine='fastparquet')
+# concatedDf.to_parquet('C:/Users/tomas/Pulpit/pipelineApiBlobAzurePowerBiWHODATA/dataProccessed/dimIndicators.parquet',engine='fastparquet')
