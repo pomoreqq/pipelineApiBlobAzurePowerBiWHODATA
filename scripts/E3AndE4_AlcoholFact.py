@@ -49,7 +49,7 @@ print(alcoholAverageDailyIntake)
 print(alcoholDALYs)
 print(alcoholExciseTaxOnBeverages)
 print(alcoholOffPremiseAgeSale)
-
+#30 0004   '300004'  string  // 
 
 factDataFrame = pd.DataFrame(columns=['IndicatorCode','SpatialDim','TimeDim','Dim1','Value','stringValue'])
 
@@ -57,9 +57,8 @@ factDataFrame = pd.concat([factDataFrame,alcoholAdvertisingRestricionsOnNational
                           ignore_index=True)
 
 factDataFrame = factDataFrame.drop('Id',axis=1)
-print(pd.unique(factDataFrame['Value']))
 factDataFrame.loc[factDataFrame['Value'] == 'Subnational'] = np.nan
-factDataFrame['Value'] = factDataFrame['Value'].str.replace(' ','',regex=False).astype(np.float32)
 
+factDataFrame['Value'] = factDataFrame['Value'].str.replace(' ','',regex=False).astype(np.float32)
 factDataFrame.to_parquet('C:/Users/tomas/Pulpit/pipelineApiBlobAzurePowerBiWHODATA/dataProccessed/factAlcohol.parquet',engine='fastparquet')
 
