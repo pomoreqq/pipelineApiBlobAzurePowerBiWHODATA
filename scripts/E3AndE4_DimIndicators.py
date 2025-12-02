@@ -49,5 +49,5 @@ tobaccoIndicators.iloc[8,-1] = 'Yes/No'
 
 concatedDf = pd.concat([alcoholIndicators,tobaccoIndicators,ncdIndicators,lifeExpectancyIndicators],ignore_index=True)
 
-
+print(concatedDf)
 # concatedDf.to_parquet('C:/Users/tomas/Pulpit/pipelineApiBlobAzurePowerBiWHODATA/dataProccessed/dimIndicators.parquet',engine='fastparquet')

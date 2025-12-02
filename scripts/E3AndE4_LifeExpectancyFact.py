@@ -27,7 +27,7 @@ lifeExpectancyUnderFiveMortalityRate = pd.read_parquet('C:/Users/tomas/Pulpit/pi
 factDataFrame = pd.DataFrame(columns=['IndicatorCode','SpatialDim','TimeDim','Dim1','Value'])
 
 factDataFrame = pd.concat([factDataFrame,lifeExpectancyAdolescentMortalityRate,lifeExpectancyAdultMortality,lifeExpectancyAtBirth,lifeExpectancyhaleAtBirth,lifeExpectancyNeonatalMortalityRate,
-                          lifeExpectancyUnderFiveMortalityRate])
+                          lifeExpectancyUnderFiveMortalityRate],ignore_index=True)
 
 factDataFrame = factDataFrame.drop('Id',axis=1)
 
